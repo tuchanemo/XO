@@ -1,13 +1,13 @@
 package io.hexlet.java.m101.xo;
 
 public class Figure {
-    private final Figure figure;
+    private final String figure;
 
-    public Figure(Figure figure) {
+    public Figure(final String figure) {
         this.figure = figure;
     }
 
-    public Figure getFigure() {
+    public String getFigure() {
         return figure;
     }
 }

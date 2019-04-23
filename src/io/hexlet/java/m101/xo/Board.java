@@ -2,7 +2,7 @@ package io.hexlet.java.m101.xo;
 
 public class Board {
 
-/*    private Figure figure11 = new Figure(" ");
+    private Figure figure11 = new Figure(" ");
 
     private Figure figure12 = new Figure(" ");
 
@@ -21,10 +21,10 @@ public class Board {
     private Figure figure33 = new Figure(" ");
 
     public void printBoard() {
-        System.out.println("%s|%s|%s\n", figure11.getFigure(), figure12.getFigure(), figure12.getFigure());
+        System.out.printf("%s|%s|%s\n", figure11.getFigure(), figure12.getFigure(), figure12.getFigure());
         System.out.println("-----");
-        System.out.println("%s|%s|%s\n", figure21.getFigure(), figure22.getFigure(), figure23.getFigure());
+        System.out.printf("%s|%s|%s\n", figure21.getFigure(), figure22.getFigure(), figure23.getFigure());
         System.out.println("-----");
-        System.out.println("%s|%s|%s\n", figure31.getFigure(), figure32.getFigure(), figure33.getFigure());
-    }*/
+        System.out.printf("%s|%s|%s\n", figure31.getFigure(), figure32.getFigure(), figure33.getFigure());
+    }
 }
