@@ -1,4 +1,4 @@
-package io.hexlet.java.m101.xo;
+package io.hexlet.java.m101.xo.model;
 
 public class Player {
     public Player(final String name, final String figure) {
@@ -12,5 +12,9 @@ public class Player {
 
     public String getName() {
         return name;
+    }
+
+    public String getFigure() {
+        return figure;
     }
 }

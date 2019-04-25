@@ -1,0 +1,26 @@
+@startuml
+GameConsoleView o-- Game
+Game o-- Player
+
+class Player {
+-Name: String
+-Figure: String
++getPlayerName(): String
++getPlayerFigure(): String
+}
+
+class Game {
+-players: Players[]
++currentPlayer(): Player
++move(x: int, y: int): boolean
++getGameName(): String
++getPlayers(): Player[]
+}
+
+class GameConsoleView {
+-game: Game
++showGameName(): void
++showPlayersName(): void
+}
+
+@enduml

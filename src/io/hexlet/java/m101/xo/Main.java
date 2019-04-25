@@ -1,5 +1,8 @@
 package io.hexlet.java.m101.xo;
 
+import io.hexlet.java.m101.xo.controller.Game;
+import io.hexlet.java.m101.xo.model.Board;
+
 public class Main {
     public static void main(String[] args) {
 
