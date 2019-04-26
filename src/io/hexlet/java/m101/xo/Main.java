@@ -2,34 +2,22 @@ package io.hexlet.java.m101.xo;
 
 import io.hexlet.java.m101.xo.controller.Game;
 import io.hexlet.java.m101.xo.model.Board;
+import io.hexlet.java.m101.xo.view.AdvConsoleView;
+import io.hexlet.java.m101.xo.view.ConsoleView;
+
 
 public class Main {
     public static void main(String[] args) {
 
-        final Board board = new Board();
-
         final Game game = new Game();
+        final AdvConsoleView advConsoleView = new AdvConsoleView(game);
+        final ConsoleView consoleView = new ConsoleView(game);
+        startGame(advConsoleView);
+        }
 
-        game.printGameName();
+        private static void startGame(final ConsoleView advConsoleView) {
+            advConsoleView.showGameName();
 
-//        final TwoPlayersGame twoPlayersGame = new TwoPlayersGame("Slava", "Max");
-//        twoPlayersGame.PrintPlayer1Name();
-//        twoPlayersGame.PrintPlayer2Name();
-//        twoPlayersGame.printGameName();
-
-//        final TreePlayersGame treePlayersGame = new TreePlayersGame("Slava", "Max", "Oleg");
-//        treePlayersGame.PrintPlayer1Name();
-//        treePlayersGame.PrintPlayer2Name();
-//        treePlayersGame.PrintPlayer3Name();
-//        treePlayersGame.printGameName();
-
-        printGameNameAndBoard(game, board);
-    }
-
-    private static void printGameNameAndBoard(final Game game, final Board board) {
-        game.printGameName();
-        System.out.println("====================================");
-        board.printBoard();
+        }
 
     }
-}

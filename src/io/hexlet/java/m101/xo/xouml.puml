@@ -1,6 +1,7 @@
 @startuml
 GameConsoleView o-- Game
 Game o-- Player
+GameConsoleView <|-- AdvGameConsoleView
 
 class Player {
 -Name: String
@@ -21,6 +22,10 @@ class GameConsoleView {
 -game: Game
 +showGameName(): void
 +showPlayersName(): void
+}
+
+class AdvGameConsoleView {
++showGameName(): void
 }
 
 @enduml
