@@ -19,4 +19,5 @@ public class Figure {
     public String toString() {
         return this.figure;
     }
+
 }

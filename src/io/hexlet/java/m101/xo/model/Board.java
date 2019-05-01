@@ -4,6 +4,9 @@ import java.util.Arrays;
 
 public class Board {
 
+    public Board() {
+    }
+
     private static final int SIZE_FIELD = 3;
 
     private Figure[][] figures = new Figure[SIZE_FIELD][SIZE_FIELD];
@@ -18,6 +21,10 @@ public class Board {
 
         System.out.println(Arrays.deepToString(this.figures));
 
+    }
+
+    private Figure getFigure() {
+        return figure;
     }
 
 }

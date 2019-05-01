@@ -17,15 +17,15 @@ public class Main {
 //        testPlayer();
 //        testConsoleView();
 
-        Board board = new Board();
-        board.initArray();
-        board.showBoard();
+        final Board board = new Board();
+        final GameController gameController = new GameController("XO", null, board);
+        new ConsoleView(gameController).showBoard();
 
     }
 
     private static void testConsoleView() {
 
-        final GameController gameController = new GameController("XO");
+        final GameController gameController = new GameController("XO", null, null);
         final AdvConsoleView advConsoleView = new AdvConsoleView(gameController);
         final ConsoleView consoleView = new ConsoleView(gameController);
         startGame(advConsoleView);
@@ -34,12 +34,14 @@ public class Main {
         try {
             new ConsoleView(null);
             throw new RuntimeException("assert is not working as expected");
-        } catch (AssertionError e){}
+        } catch (AssertionError e) {
+        }
 
         try {
             new AdvConsoleView(null);
             throw new RuntimeException("assert is not working as expected");
-        } catch (AssertionError e){}
+        } catch (AssertionError e) {
+        }
 
     }
 
@@ -53,7 +55,8 @@ public class Main {
         try {
             new Figure(null);
             throw new RuntimeException("assert is not working as expected");
-        } catch (AssertionError e) {}
+        } catch (AssertionError e) {
+        }
 
     }
 
@@ -66,14 +69,16 @@ public class Main {
         }
 
         try {
-            new Player(null,playerFigure);
+            new Player(null, playerFigure);
             throw new RuntimeException("assert is not working as expected");
-        } catch (AssertionError e) {}
+        } catch (AssertionError e) {
+        }
 
         try {
-            new Player(playerName,null);
+            new Player(playerName, null);
             throw new RuntimeException("assert is not working as expected");
-        } catch (AssertionError e) {}
+        } catch (AssertionError e) {
+        }
     }
 
     private static void testBoard() {
@@ -84,7 +89,7 @@ public class Main {
     private static void testGameController() {
 
         final String gameName = "XO";
-        final GameController gameController = new GameController(gameName);
+        final GameController gameController = new GameController(gameName, null, null);
         if (!gameController.getGameName().equals(gameName)) {
             throw new RuntimeException("GameController test falure");
         }
