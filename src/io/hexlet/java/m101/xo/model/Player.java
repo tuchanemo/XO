@@ -1,20 +1,27 @@
 package io.hexlet.java.m101.xo.model;
 
 public class Player {
-    public Player(final String name, final String figure) {
-        this.name = name;
-        this.figure = figure;
-    }
 
     private final String name;
 
-    private final String figure;
+    private final Figure figure;
+
+    public Player(final String name, final Figure figure) {
+
+        // BEGIN
+        assert name != null;
+        assert figure != null;
+        // END
+
+        this.name = name;
+        this.figure = figure;
+    }
 
     public String getName() {
         return name;
     }
 
-    public String getFigure() {
+    public Figure getFigure() {
         return figure;
     }
 }

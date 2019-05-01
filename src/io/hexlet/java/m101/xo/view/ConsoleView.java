@@ -1,11 +1,12 @@
 package io.hexlet.java.m101.xo.view;
 
-import io.hexlet.java.m101.xo.controller.Game;
+import io.hexlet.java.m101.xo.controller.GameController;
 
 public class ConsoleView {
-    protected final Game game;
 
-    public ConsoleView(final Game game) {
+    protected final GameController game;
+
+    public ConsoleView(final GameController game) {
         this.game = game;
     }
 
@@ -13,7 +14,7 @@ public class ConsoleView {
         System.out.println(game.getGameName());
     }
 
-    public void showPlayerName() {
+    public void showPlayersName() {
         System.out.println(game.getPlayers());
     }
 

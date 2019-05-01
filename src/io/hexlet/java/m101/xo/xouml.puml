@@ -28,4 +28,15 @@ class AdvGameConsoleView {
 +showGameName(): void
 }
 
+class Board {
+-figures: Figure[][]
++getFigure(position: int,position int): Figure
++setFigure(position: int,position int, figure: Figure): boolean
+}
+
+class Figure {
+-figure: String
++getFigure(): String
+}
+
 @enduml
